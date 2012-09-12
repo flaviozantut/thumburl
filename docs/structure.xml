@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="thumburl">
+  <file path="libraries/thumburl.php" hash="812580ff61fd450fb43884a45a60d8d1" package="Thumburl">
+    <docblock line="2">
+      <description><![CDATA[Thumburl]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="category" description="Thumburl"/>
+      <tag line="2" name="package" description="Thumburl"/>
+      <tag line="2" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+      <tag line="2" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+      <tag line="2" name="link" description="http://link.com" link="http://link.com"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="21" package="Thumburl">
+      <extends/>
+      <name>Thumburl</name>
+      <full_name>\Thumburl</full_name>
+      <docblock line="12">
+        <description><![CDATA[Thumburl Lib]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="12" name="category" description="Libraries"/>
+        <tag line="12" name="package" description="Thumburl"/>
+        <tag line="12" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+        <tag line="12" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+        <tag line="12" name="link" description="http://link.com" link="http://link.com"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="23" namespace="global" package="Default">
+        <name>$imagine</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="23" namespace="global" package="Default">
+        <name>$mode</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="Thumburl">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="25">
+          <description><![CDATA[Class constructor]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="25" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="46" package="Thumburl">
+        <name>setCache</name>
+        <full_name>setCache</full_name>
+        <docblock line="39">
+          <description><![CDATA[Save image in cache]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="39" name="param" description="file" type="string" variable="$file">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="39" name="return" description="" type="\file">
+            <type by_reference="false">\file</type>
+          </tag>
+        </docblock>
+        <argument line="46">
+          <name>$tipe</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="46">
+          <name>$size</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="46">
+          <name>$mode</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="46">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="46">
+          <name>$thumb</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="60" package="Thumburl">
+        <name>getCache</name>
+        <full_name>getCache</full_name>
+        <docblock line="53">
+          <description><![CDATA[Get image from cache]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="53" name="param" description="file" type="string" variable="$file">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="53" name="return" description="" type="\Response">
+            <type by_reference="false">\Response</type>
+          </tag>
+        </docblock>
+        <argument line="60">
+          <name>$tipe</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="60">
+          <name>$size</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="60">
+          <name>$mode</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="60">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="73" package="Thumburl">
+        <name>boxSize</name>
+        <full_name>boxSize</full_name>
+        <docblock line="66">
+          <description><![CDATA[Get Box Size]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="66" name="param" description="image size" type="string" variable="$size">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="66" name="return" description="" type="\Imagine\Image\Box">
+            <type by_reference="false">\Imagine\Image\Box</type>
+          </tag>
+        </docblock>
+        <argument line="73">
+          <name>$size</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="90" package="Thumburl">
+        <name>mode</name>
+        <full_name>mode</full_name>
+        <docblock line="83">
+          <description><![CDATA[Image mode]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="83" name="param" description="mode" type="string" variable="$mode">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="83" name="return" description="" type="\Imagine\Image\Box">
+            <type by_reference="false">\Imagine\Image\Box</type>
+          </tag>
+        </docblock>
+        <argument line="90">
+          <name>$mode</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="116" package="Thumburl">
+        <name>url</name>
+        <full_name>url</full_name>
+        <docblock line="109">
+          <description><![CDATA[Get image file]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="109" name="param" description="image url" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="109" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="116">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="140" package="Thumburl">
+        <name>thumbnail</name>
+        <full_name>thumbnail</full_name>
+        <docblock line="132">
+          <description><![CDATA[Resize Image]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="132" name="param" description="image size" type="string" variable="$size">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="132" name="param" description="image url" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="132" name="return" description="" type="\Response">
+            <type by_reference="false">\Response</type>
+          </tag>
+        </docblock>
+        <argument line="140">
+          <name>$size</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="140">
+          <name>$mode</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="140">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="23" code="50018">No DocBlock was found for property $imagine</error>
+      <error line="23" code="50018">No DocBlock was found for property $mode</error>
+      <error line="39" code="50014">Name of argument $tipe does not match with the DocBlock's name $file in setCache()</error>
+      <error line="39" code="50015">Argument $size is missing from the Docblock of setCache()</error>
+      <error line="39" code="50015">Argument $mode is missing from the Docblock of setCache()</error>
+      <error line="39" code="50015">Argument $url is missing from the Docblock of setCache()</error>
+      <error line="39" code="50015">Argument $thumb is missing from the Docblock of setCache()</error>
+      <notice line="39" code="50013">Parameter $file could not be found in setCache()</notice>
+      <error line="53" code="50014">Name of argument $tipe does not match with the DocBlock's name $file in getCache()</error>
+      <error line="53" code="50015">Argument $size is missing from the Docblock of getCache()</error>
+      <error line="53" code="50015">Argument $mode is missing from the Docblock of getCache()</error>
+      <error line="53" code="50015">Argument $url is missing from the Docblock of getCache()</error>
+      <notice line="53" code="50013">Parameter $file could not be found in getCache()</notice>
+      <error line="132" code="50014">Name of argument $mode does not match with the DocBlock's name $url in thumbnail()</error>
+      <error line="132" code="50015">Argument $url is missing from the Docblock of thumbnail()</error>
+    </parse_markers>
+  </file>
+  <file path="routes.php" hash="af19f17af4ac07b683c62023e5c12c95" package="Thumburl">
+    <docblock line="2">
+      <description><![CDATA[Configuração de rotas]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="category" description="Routes"/>
+      <tag line="2" name="package" description="Thumburl"/>
+      <tag line="2" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+      <tag line="2" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+      <tag line="2" name="link" description="http://link.com" link="http://link.com"/>
+    </docblock>
+  </file>
+  <file path="start.php" hash="e688136b537d08cc8ab1e081712ffd18" package="Thumburl">
+    <docblock line="2">
+      <description><![CDATA[Thumburl]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="category" description="Thumburl"/>
+      <tag line="2" name="package" description="Thumburl"/>
+      <tag line="2" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+      <tag line="2" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+      <tag line="2" name="link" description="http://link.com" link="http://link.com"/>
+    </docblock>
+  </file>
+  <file path="tests/thumburl.test.php" hash="c55791f252375eac55923dc96a7c1529" package="Thumburl">
+    <docblock line="2">
+      <description><![CDATA[Thumburl]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="category" description="Thumburl"/>
+      <tag line="2" name="package" description="Thumburl"/>
+      <tag line="2" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+      <tag line="2" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+      <tag line="2" name="link" description="http://link.com" link="http://link.com"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="21" package="Tests">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>TestThumburl</name>
+      <full_name>\TestThumburl</full_name>
+      <docblock line="12">
+        <description><![CDATA[Thumburl Test]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="12" name="category" description="Thumburl"/>
+        <tag line="12" name="package" description="Tests"/>
+        <tag line="12" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+        <tag line="12" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+        <tag line="12" name="link" description="http://link.com" link="http://link.com"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="29" package="Tests">
+        <name>setUp</name>
+        <full_name>setUp</full_name>
+        <docblock line="24">
+          <description><![CDATA[Setup the test enviornment.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="24" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="Tests">
+        <name>testUrl</name>
+        <full_name>testUrl</full_name>
+        <docblock line="38">
+          <description><![CDATA[Test Resize]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="38" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="controllers/thumburl.php" hash="253e8dba035d72855fefb1d5e1759eb3" package="Thumburl">
+    <docblock line="2">
+      <description><![CDATA[Thumburl]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="category" description="Thumburl"/>
+      <tag line="2" name="package" description="Thumburl"/>
+      <tag line="2" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+      <tag line="2" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+      <tag line="2" name="link" description="http://link.com" link="http://link.com"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="21" package="Thumburl">
+      <extends>\Controller</extends>
+      <name>Thumburl_Thumburl_Controller</name>
+      <full_name>\Thumburl_Thumburl_Controller</full_name>
+      <docblock line="12">
+        <description><![CDATA[Thumburl Controller]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="12" name="category" description="Controller"/>
+        <tag line="12" name="package" description="Thumburl"/>
+        <tag line="12" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+        <tag line="12" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+        <tag line="12" name="link" description="http://link.com" link="http://link.com"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="26" package="Thumburl">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="23">
+          <description><![CDATA[constructor]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="Thumburl">
+        <name>__call</name>
+        <full_name>__call</full_name>
+        <docblock line="33">
+          <description><![CDATA[Catch-all method for requests that can't be matched.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="33" name="param" description="method" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="33" name="param" description="parameters" type="array" variable="$parameters">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="33" name="return" description="" type="\Response">
+            <type by_reference="false">\Response</type>
+          </tag>
+        </docblock>
+        <argument line="41">
+          <name>$method</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="41">
+          <name>$parameters</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="57" package="Thumburl">
+        <name>action_thumbnail</name>
+        <full_name>action_thumbnail</full_name>
+        <docblock line="46">
+          <description><![CDATA[Get thumbnail of image]]></description>
+          <long-description><![CDATA[<p>Exemplo: <em>http://myproject.com/thumburl/thumbnail/390/inbound/images/photo.png</em></p>]]></long-description>
+          <tag line="46" name="param" description="image size Wxh ex.: 150x120 or 150" type="string" variable="$size">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="param" description="image mode inbound or outbound" type="string" variable="$mode">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="param" description="image url" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="return" description="" type="\Response">
+            <type by_reference="false">\Response</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$size</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$mode</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="config/options.php" hash="4dcc02673dc3baeba4cc716634929df8" package="Thumburl">
+    <docblock line="2">
+      <description><![CDATA[Thumburl]]></description>
+      <long-description><![CDATA[]]></long-description>
+      <tag line="2" name="category" description="Thumburl"/>
+      <tag line="2" name="package" description="Thumburl"/>
+      <tag line="2" name="author" description="Flavio Zantut  &lt;flaviozantut@gmail.com&gt;"/>
+      <tag line="2" name="license" description="MIT License &lt;http://www.opensource.org/licenses/mit&gt;"/>
+      <tag line="2" name="link" description="http://link.com" link="http://link.com"/>
+    </docblock>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="Tests" full_name="Tests"/>
+  <package name="Thumburl" full_name="Thumburl"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
