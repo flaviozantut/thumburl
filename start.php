@@ -51,4 +51,5 @@ Autoloader::directories(array(
 */
 Autoloader::namespaces(array(
     'Imagine' => Bundle::path('thumburl').'libraries/Imagine/lib/Imagine/',
+    'Thumburl' => Bundle::path('thumburl').'libraries/',
 ));
