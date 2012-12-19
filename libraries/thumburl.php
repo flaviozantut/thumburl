@@ -34,40 +34,11 @@ class Thumburl
         $this->imagine = new $Imagine();
     }
 
-
-    
-    /**
-     * Save image in cache
-     *
-     * @param string $file file
-     * 
-     * @return file
-     */
-    public function setCache($tipe, $size, $mode, $url , $thumb)
-    {
-        $name = md5($tipe . $size . $mode . $url);
-        Cache::put($name , base64_encode($thumb), \Config::get('thumburl::options.caching.time'));
-        
-    }
-
-    /**
-     * Get image from cache
-     *
-     * @param string $file file
-     * 
-     * @return Response
-     */
-    public function getCache($tipe, $size, $mode, $url)
-    {
-        $name = md5($tipe . $size . $mode . $url);
-        return base64_decode(Cache::get($name));
-    }
-
     /**
      * Get Box Size
      *
      * @param string $size image size
-     * 
+     *
      * @return Imagine\Image\Box
      */
     public function boxSize($size)
@@ -84,7 +55,7 @@ class Thumburl
      * Image mode
      *
      * @param string $mode mode
-     * 
+     *
      * @return Imagine\Image\Box
      */
     public function mode($mode)
@@ -110,8 +81,8 @@ class Thumburl
      * Get image file
      *
      * @param string $url image url
-     * 
-     * @return string 
+     *
+     * @return string
      */
     public function url($url)
     {
@@ -134,42 +105,32 @@ class Thumburl
      *
      * @param string $size image size
      * @param string $url  image url
-     * 
+     *
      * @return Response
      */
     public function thumbnail($size, $mode, $url)
     {
         $Imagine =& $this->imagine;
 
-        if (\Config::get('thumburl::options.caching.enabled')) {
-           $thumb = $this->getCache('thumbnail', $size, $mode, $url);
-            if ($thumb) {
-                return $thumb;
-            } else {
+        if (!file_exists(path('public') . "thumburl/thumbnail/{$size}/{$mode}/{$url}")) {
+            @mkdir(path('public') . "thumburl/thumbnail/{$size}/{$mode}/uploads" , 0777, true );
 
-                $thumb = $Imagine
-                    ->open( $this->url($url) )
-                    ->thumbnail($this->boxSize($size), $this->mode($mode));   
-                $this->setCache('thumbnail', $size, $mode, $url, $thumb);
-                return  $thumb;
-               // return $this->getCache('thumbnail', $size, $mode, $url);
-            }
-            
-            //$thumb = $this->getCache('thumbnail', $size, $mode, $url);
-           // var_dump($thumb);
-           //die();
-            /*$thumb = $Imagine
-                    ->open( $this->url($url) )
-                    ->thumbnail($this->boxSize($size), $this->mode($mode));*/
-
-
-            return $thumb;
-        } else {
-            return $Imagine
-                ->open($this->url($url))
+            $sizeX = explode('X', strtoupper($size));
+            $w = ( isset($sizeX[0]) and is_numeric($sizeX[0]) )  ?$sizeX[0]:100;
+            $h = (isset($sizeX[1]) and is_numeric($sizeX[1]))?$sizeX[1]:$w;
+            $thumb = $Imagine
+                ->open( $this->url($url) )
                 ->thumbnail($this->boxSize($size), $this->mode($mode));
+
+            $thumbSize = $thumb->getSize();
+            $collage = $Imagine->create(new Imagine\Image\Box($w, $h), new Imagine\Image\Color('#fff', 100));
+            $collage->paste($thumb, new Imagine\Image\Point(($w-$thumbSize->getWidth())/2, ($h-$thumbSize->getHeight())/2));
+
+            if (\Config::get('thumburl::options.caching.enabled')) {
+                $collage->save(path('public') . "thumburl/thumbnail/{$size}/{$mode}/{$url}");
+            }
+            return $collage;
         }
-        
     }
 
 }

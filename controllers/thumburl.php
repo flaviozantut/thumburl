@@ -26,7 +26,7 @@ class Thumburl_Thumburl_Controller extends Controller
     public function __construct()
     {
         parent::__construct();
-        
+
         \Config::set('application.profiler', false);
     }
 
@@ -35,7 +35,7 @@ class Thumburl_Thumburl_Controller extends Controller
      *
      * @param string $method     method
      * @param array  $parameters parameters
-     * 
+     *
      * @return Response
      */
     public function __call($method, $parameters)
@@ -45,22 +45,22 @@ class Thumburl_Thumburl_Controller extends Controller
 
     /**
      * Get thumbnail of image
-     * 
+     *
      * Exemplo: _http://myproject.com/thumburl/thumbnail/390/inbound/images/photo.png_
      *
      * @param string $size image size Wxh ex.: 150x120 or 150
      * @param string $mode image mode inbound or outbound
      * @param string $url  image url
-     * 
+     *
      * @return Response
      */
     public function action_thumbnail($size, $mode, $url)
-    {  
+    {
         $url = implode('/', array_diff(func_get_args(), array($size, $mode)));
 
         $thumb = new Thumburl();
         $response = $thumb->thumbnail($size, $mode, $url);
-       
+
         //require extension=php_fileinfo
         $finfo   = new finfo(FILEINFO_MIME_TYPE);
 
