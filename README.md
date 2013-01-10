@@ -19,6 +19,7 @@ Installation with Laravel Artisan
 ## Usage
 	
 http://myproject.com/thumburl/thumbnail/[size]/[mode]/[url]
+
 	
 * [size] = thumbnail size widthXheight in px : 800X600, 800 is equivalent to 800X800
 
@@ -29,3 +30,7 @@ http://myproject.com/thumburl/thumbnail/[size]/[mode]/[url]
 ## Example
 
 http://myproject.com/thumburl/thumbnail/390/inbound/images/photo.png
+
+### Html
+
+	\Thumburl\Html::thumbnail("image.png", '195x273', 'inbound', 'alt')
