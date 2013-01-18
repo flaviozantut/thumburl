@@ -18,7 +18,7 @@ namespace Thumburl;
  * @license  MIT License <http://www.opensource.org/licenses/mit>
  * @link     http://link.com
  */
-class Html extends \Html
+class Html extends \Laravel\Html
 {
 
     /**
